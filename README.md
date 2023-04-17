@@ -2,7 +2,7 @@
 
 ## Link to deployed website:
 
-heroku
+https://levis-book-search.herokuapp.com/
 
 ## Images of website:
 

@@ -8,11 +8,13 @@ const resolvers = {
             return User.find()
         },
         me: async (parent, args, context) => {
-            if(!context.user){
-                throw new AuthenticationError('Error, no user logged in!')
+            if (context.user) {
+              const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+              return userData;
             }
-            return User.findOne({ _id: context.user._id })
-        },
+      
+            throw new AuthenticationError('Not logged in');
+          },
     },
     Mutation: {
         addUser: async (parent, { username, email, password }) => {

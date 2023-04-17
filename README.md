@@ -6,7 +6,7 @@ heroku
 
 ## Description
 
-For this assignment< I refactored a website to use graphql. 
+For this assignment, I refactored a website to use graphql. 
 
 ## License
 
